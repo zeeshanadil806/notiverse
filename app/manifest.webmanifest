@@ -1,0 +1,22 @@
+{
+    "name": "Notify - Digital Marketing & E-Commerce Services",
+    "short_name": "Notify",
+    "description": "Expert Digital Marketing & E-Commerce solutions to grow your business.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0a74da",
+    "icons": [
+      {
+        "src": "/logo.png",
+        "sizes": "192x192",
+        "type": "image/png"
+      },
+      {
+        "src": "/logo.png",
+        "sizes": "512x512",
+        "type": "image/png"
+      }
+    ]
+  }
+  

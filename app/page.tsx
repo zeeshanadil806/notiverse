@@ -1,101 +1,83 @@
-import Image from "next/image";
+import { FuturisticAbout } from "@/components/home/about-section";
+import AnimatedBrands from "@/components/home/animated-brands";
+import HeroSection from "@/components/home/hero-section";
+import InsightsSection from "@/components/home/insights-section";
+import ServicesSection from "@/components/home/services-section";
+import { TestimonialsSection } from "@/components/home/testimonials-section";
+import { WhatSetsUsApart } from "@/components/home/what-sets-us-apart";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Notify",
+  description:
+    "Notify offers expert digital marketing & e-commerce solutions to grow your business. Get SEO, PPC, and social media marketing services tailored to your needs.",
+  keywords: [
+    "digital marketing",
+    "SEO",
+    "e-commerce solutions",
+    "PPC",
+    "social media marketing",
+  ],
+  authors: [{ name: "Notify Team", url: "https://notiverse.io/" }],
+  metadataBase: new URL("https://notiverse.io"),
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    title: "Notify",
+    description:
+      "Boost your business with our top-notch digital marketing and e-commerce strategies.",
+    url: "https://notiverse.io/",
+    siteName: "Notify",
+    type: "website",
+    images: [
+      {
+        url: "https://notiverse.io/images/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Notify - Digital Marketing",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Notify",
+    description:
+      "Expert digital marketing & e-commerce solutions to scale your business.",
+    images: ["https://notiverse.io/images/twitter-image.jpg"],
+  },
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/apple-touch-icon.png",
+  },
+  manifest: "/manifest.webmanifest",
+};
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+    <main className="min-h-screen bg-gradient-to-br from-[#020617] via-[#041434] to-[#020617]">
+      <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Notify",
+            "url": "https://notiverse.io/",
+            "logo": "https://notiverse.io/logo.png",
+            "sameAs": [
+              "https://www.facebook.com/profile.php?id=100092555912722",
+              "https://www.instagram.com/team_notify/",
+              "https://www.linkedin.com/company/team-notify"
+            ]
+          })}
+        </script>
+      <HeroSection />
+      <FuturisticAbout />
+      <ServicesSection />
+      <WhatSetsUsApart />
+      <InsightsSection />
+      <AnimatedBrands />
+      <TestimonialsSection />
+    </main>
+  )
 }
+
