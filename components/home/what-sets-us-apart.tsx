@@ -2,7 +2,7 @@
 import { motion } from "framer-motion"
 import { Shield, Brain, Globe, Cpu, Users, Rocket } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { useEffect } from "react"
+import { Suspense, useEffect } from "react"
 import { useSearchParams } from "next/navigation"
 
 const features = [
@@ -41,8 +41,7 @@ const features = [
       "As a full-service digital agency, we offer everything from strategy to execution under one roof—creating a seamless experience that drives business growth and long-lasting success.",
   },
 ]
-
-export const WhatSetsUsApart = () => {
+const ScrollHandler = () => {
   const searchParams = useSearchParams();
   const scrollTo = searchParams.get("scrollTo");
 
@@ -55,8 +54,17 @@ export const WhatSetsUsApart = () => {
     }
   }, [scrollTo]);
 
+  return null;
+};
+
+export const WhatSetsUsApart = () => {
+  
+
   return (
     <section id="what-sets-us-apart" className="relative py-20 dark:text-white">
+      <Suspense fallback={null}>
+        <ScrollHandler />
+      </Suspense>
       <div className="absolute inset-0 z-0 opacity-10">
         {/* <svg className="h-full w-full">
           <pattern id="circuit-board" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
