@@ -2,6 +2,8 @@
 import { motion } from "framer-motion"
 import { Shield, Brain, Globe, Cpu, Users, Rocket } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { useEffect } from "react"
+import { useSearchParams } from "next/navigation"
 
 const features = [
   {
@@ -41,8 +43,20 @@ const features = [
 ]
 
 export const WhatSetsUsApart = () => {
+  const searchParams = useSearchParams();
+  const scrollTo = searchParams.get("scrollTo");
+
+  useEffect(() => {
+    if (scrollTo) {
+      const section = document.getElementById(scrollTo);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [scrollTo]);
+
   return (
-    <section id="what-sets-us-apart" className="relative py-20 text-white">
+    <section id="what-sets-us-apart" className="relative py-20 dark:text-white">
       <div className="absolute inset-0 z-0 opacity-10">
         {/* <svg className="h-full w-full">
           <pattern id="circuit-board" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">

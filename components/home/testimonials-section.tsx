@@ -50,7 +50,7 @@ export const TestimonialsSection = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-2 text-4xl font-bold text-white sm:text-5xl"
+            className="mt-2 text-4xl font-bold dark:text-white sm:text-5xl"
           >
             What Our Clients Say
           </motion.h2>
@@ -84,12 +84,12 @@ export const TestimonialsSection = () => {
                   ))}
                 </div>
 
-                <blockquote className="mb-8 text-lg text-gray-300">&quot;{testimonial.quote}&quot;</blockquote>
+                <blockquote className="mb-8 text-lg text-gray-700 dark:text-white">&quot;{testimonial.quote}&quot;</blockquote>
 
                 <div className="flex items-center gap-4">
                   <div>
                     <div className="font-semibold text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-400">
+                    <div className="text-sm text-gray-700 dark:text-gray-400">
                       {testimonial.position}, {testimonial.company}
                     </div>
                   </div>

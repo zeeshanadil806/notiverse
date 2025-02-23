@@ -15,6 +15,8 @@ import { Button } from "@/components/ui/button"
 import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { AnimatedLogo } from "../logo-animation"
+import { ThemeToggle } from "../theme-toggle"
+import { useRouter } from "next/navigation"
 // import { ThemeToggle } from "./theme-toggle"
 // import { AnimatedLogo } from "./animated-logo"
 
@@ -43,13 +45,19 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
+  const router = useRouter();
 
   const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId)
+    const section = document.getElementById(sectionId);
+  
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" })
+      section.scrollIntoView({ behavior: "smooth" });
+    } else {
+      // Navigate to home and scroll smoothly after navigation
+      router.push(`/?scrollTo=${sectionId}`);
     }
-  }
+  };
+  
 
   return (
     <nav className="fixed top-0 z-50 w-full border-b bg-white dark:bg-background">
@@ -100,6 +108,7 @@ export function Navbar() {
         </div>
 
         <div className="flex flex-1 items-center justify-end space-x-2 lg:space-x-4">
+          <ThemeToggle />
           <Button
             variant="ghost"
             className="hidden lg:inline-flex text-sm font-medium hover:bg-primary hover:text-primary-foreground px-3"

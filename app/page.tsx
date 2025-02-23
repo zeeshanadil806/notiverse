@@ -55,7 +55,7 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-gradient-to-br from-[#020617] via-[#041434] to-[#020617]">
+    <main className="min-h-screen ">
       <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",

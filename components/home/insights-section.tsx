@@ -178,7 +178,7 @@ export default function InsightsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-2 text-4xl font-bold text-white sm:text-5xl"
+            className="mt-2 text-4xl font-bold dark:text-white sm:text-5xl"
           >
             Stories of our{' '}
             <span className="text-primary">transformations</span> across{' '}

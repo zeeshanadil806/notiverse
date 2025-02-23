@@ -29,7 +29,7 @@ export const FuturisticAbout = () => {
   const [hoveredService, setHoveredService] = useState<number | null>(null)
 
   return (
-    <section className="relative overflow-hidden border-b border-gray-700 py-20 text-white" id="services">
+    <section className="relative overflow-hidden border-b border-gray-700 py-20 dark:text-white" id="services">
       {/* Animated background */}
       <div className="absolute inset-0 z-0">
         <svg className="h-full w-full">
@@ -88,7 +88,7 @@ export const FuturisticAbout = () => {
                 <div className="relative z-10 p-6">
                   <service.icon className="mb-4 h-12 w-12 text-primary" />
                   <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
-                  <p className="text-gray-400">{service.description}</p>
+                  <p className="text-white dark:text-gray-400">{service.description}</p>
                 </div>
               </Card>
             </motion.div>

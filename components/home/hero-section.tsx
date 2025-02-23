@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react"
 import { Button } from "@/components/ui/button"
+import Link from "next/link"
 
 // Custom hook for responsive video source
 const useResponsiveVideo = () => {
@@ -107,9 +108,11 @@ export default function HeroSection() {
                 We help companies redefine the future through technology
               </p>
               <div className="mt-6 sm:mt-8 md:mt-10">
+                <Link href={"/book-a-call"}>
                 <Button size="lg" className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90">
                   Get In Touch
                 </Button>
+                </Link>
               </div>
             </div>
           </div>

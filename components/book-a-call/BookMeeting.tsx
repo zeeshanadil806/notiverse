@@ -29,7 +29,7 @@ const benefits = [
 
 export default function BookMeeting() {
   return (
-    <main className="mt-20 min-h-screen bg-[#020617] py-12 text-white">
+    <main className="mt-20 min-h-screen py-12 dark:text-white">
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,7 +54,7 @@ export default function BookMeeting() {
                 <Card key={index} className="bg-gray-800">
                   <CardHeader>
                     <benefit.icon className="h-8 w-8 text-primary" />
-                    <CardTitle className="text-lg">{benefit.title}</CardTitle>
+                    <CardTitle className="text-lg text-white">{benefit.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <CardDescription>{benefit.description}</CardDescription>

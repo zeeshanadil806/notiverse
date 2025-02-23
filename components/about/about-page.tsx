@@ -21,7 +21,7 @@ export default function AboutPage() {
         { icon: Cpu, title: "AI-Powered Solutions", description: "Leveraging cutting-edge technology for your business" },
       ]
   return (
-    <div className="bg-gradient-to-br from-[#020617] via-[#041434] to-[#020617]">
+    <div className="">
       <section className="relative h-[60vh] min-h-[400px] overflow-hidden">
         {/* Background Image */}
         <div
@@ -72,7 +72,7 @@ export default function AboutPage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
-          className="mx-auto max-w-3xl text-center text-lg text-gray-300"
+          className="mx-auto max-w-3xl text-center text-lg text-gray-800 dark:text-gray-300"
         >
           <p className="mb-4">
             Since 2019, Notify has been at the forefront of developing software solutions for industries such as ERP,
@@ -109,7 +109,7 @@ export default function AboutPage() {
               className="rounded-lg bg-gray-800 p-6 transition-all duration-300 hover:bg-gray-700"
             >
               <service.icon className="mb-4 h-12 w-12 text-primary" />
-              <h3 className="mb-2 text-xl font-semibold">{service.title}</h3>
+              <h3 className="mb-2 text-xl font-semibold text-white">{service.title}</h3>
               <p className="text-gray-400">{service.description}</p>
             </motion.div>
           ))}
@@ -175,7 +175,7 @@ export default function AboutPage() {
         >
           <Globe className="mx-auto mb-6 h-16 w-16 text-primary" />
           <h2 className="mb-4 text-3xl font-bold sm:text-4xl">Global Reach</h2>
-          <p className="mx-auto max-w-2xl text-lg text-gray-300">
+          <p className="mx-auto max-w-2xl text-lg text-gray-600 dark:text-gray-300">
             With a global reach and a client-centric approach, we provide personalized solutions that exceed
             expectations and drive measurable success. We pride ourselves on delivering projects on time and delivering
             real value for businesses of all sizes.
