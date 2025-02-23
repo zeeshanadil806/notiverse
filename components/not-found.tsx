@@ -46,7 +46,7 @@ export default function NotFoundPage() {
       >
         <p>
           If you believe this is an error, please{" "}
-          <Link href="/contact-us" className="text-primary hover:underline">
+          <Link href="/contact" className="text-primary hover:underline">
             contact our support team
           </Link>
           .

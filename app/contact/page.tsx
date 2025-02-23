@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import ContactHero from "@/components/contact/contact-hero";
 import ContactForm from "@/components/contact/contact-form";
 import DirectContact from "@/components/contact/direct-contact";
-import LocationMap from "@/components/contact/location-map";
+// import LocationMap from "@/components/contact/location-map";
 
 export const metadata: Metadata = {
   title: "Contact Us - Notify | Get in Touch with Our Experts",
@@ -56,7 +56,7 @@ export default function ContactPage() {
         <ContactForm />
         <div>
           <DirectContact />
-          <LocationMap />
+          {/* <LocationMap /> */}
         </div>
       </div>
     </main>
