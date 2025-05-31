@@ -17,13 +17,13 @@ const useResponsiveVideo = () => {
       if (width <= 768) {
         // Mobile video
         setVideoSource({
-          src: "/hero-mobile.mp4",
+          src: "/hero.mp4",
           type: "video/mp4",
         })
       } else if (width <= 1024) {
         // Tablet video
         setVideoSource({
-          src: "/hero-tablet.mp4",
+          src: "/hero.mp4",
           type: "video/mp4",
         })
       } else {
@@ -51,7 +51,7 @@ export default function HeroSection() {
 
   return (
     <div>
-      <section className="relative h-screen w-full">
+      <section className="relative md:h-screen w-full h-[70vh]">
         {/* Video Background */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Desktop Video */}
@@ -77,7 +77,7 @@ export default function HeroSection() {
             className="hidden h-full w-full object-cover md:block lg:hidden"
             // poster="/video-poster-tablet.jpg"
           >
-            <source src="/hero-tablet.mp4" type="video/mp4" />
+            <source src="/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Mobile Video */}
@@ -87,10 +87,10 @@ export default function HeroSection() {
             muted
             loop
             playsInline
-            className="h-full w-full object-cover md:hidden"
+            className="h-[70vh] w-full object-cover md:hidden"
             // poster="/video-poster-mobile.jpg"
           >
-            <source src="/hero-mobile.mp4" type="video/mp4" />
+            <source src="/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Overlay */}
@@ -98,7 +98,7 @@ export default function HeroSection() {
         </div>
 
         {/* Content */}
-        <div className="relative z-10 flex h-full items-center">
+        <div className="relative z-10 flex md:h-full items-center h-[70vh]">
           <div className="container mx-auto px-4">
             <div className="max-w-2xl">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">

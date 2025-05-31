@@ -75,7 +75,7 @@ export const TestimonialsSection = () => {
               transition={{ delay: index * 0.2 }}
               className="relative"
             >
-              <div className="relative rounded-lg bg-gray-800/30 p-8">
+              <div className="relative rounded-lg bg-gray-300/30 p-8">
                 <Quote className="absolute right-8 top-8 h-12 w-12 text-primary/20" />
 
                 <div className="mb-4 flex">
@@ -88,7 +88,7 @@ export const TestimonialsSection = () => {
 
                 <div className="flex items-center gap-4">
                   <div>
-                    <div className="font-semibold text-white">{testimonial.name}</div>
+                    <div className="font-semibold dark:text-white">{testimonial.name}</div>
                     <div className="text-sm text-gray-700 dark:text-gray-400">
                       {testimonial.position}, {testimonial.company}
                     </div>

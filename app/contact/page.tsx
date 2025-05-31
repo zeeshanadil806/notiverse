@@ -50,7 +50,7 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <main className=" text-white">
+    <main className="dark:text-white">
       <ContactHero />
       <div className="container mx-auto grid gap-12 px-4 py-20 md:grid-cols-2">
         <ContactForm />

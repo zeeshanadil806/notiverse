@@ -1,10 +1,10 @@
-import { FuturisticAbout } from "@/components/home/about-section";
+// import { FuturisticAbout } from "@/components/home/about-section";
 import AnimatedBrands from "@/components/home/animated-brands";
 import HeroSection from "@/components/home/hero-section";
 import InsightsSection from "@/components/home/insights-section";
 import ServicesSection from "@/components/home/services-section";
 import { TestimonialsSection } from "@/components/home/testimonials-section";
-import { WhatSetsUsApart } from "@/components/home/what-sets-us-apart";
+// import { WhatSetsUsApart } from "@/components/home/what-sets-us-apart";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -71,11 +71,11 @@ export default function Home() {
           })}
         </script>
       <HeroSection />
-      <FuturisticAbout />
-      <ServicesSection />
-      <WhatSetsUsApart />
-      <InsightsSection />
       <AnimatedBrands />
+      {/* <FuturisticAbout /> */}
+      <ServicesSection />
+      {/* <WhatSetsUsApart /> */}
+      <InsightsSection />
       <TestimonialsSection />
     </main>
   )

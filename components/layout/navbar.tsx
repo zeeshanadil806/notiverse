@@ -71,36 +71,37 @@ export function Navbar() {
           <NavigationMenu>
             <NavigationMenuList className="space-x-6">
               <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium text-gray-900 dark:text-white">
-                  WHAT WE DO
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] lg:w-[500px] md:grid-cols-2">
-                    {components.map((component) => (
-                      <ListItem key={component.title} title={component.title} href={component.href}>
-                        {component.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
-                <NavigationMenuTrigger className="text-sm font-medium text-gray-900 dark:text-white">
-                  WHO WE HELP
-                </NavigationMenuTrigger>
-                <NavigationMenuContent>
-                  <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] lg:w-[500px] md:grid-cols-2">
-                    {components.map((component) => (
-                      <ListItem key={component.title} title={component.title} href={component.href}>
-                        {component.description}
-                      </ListItem>
-                    ))}
-                  </ul>
-                </NavigationMenuContent>
-              </NavigationMenuItem>
-              <NavigationMenuItem>
                 <Link href="/about" className="text-sm font-medium text-gray-900 dark:text-white">
-                  WHO WE ARE
+                  About Us
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <NavigationMenuTrigger className="text-sm font-medium text-gray-900 dark:text-white">
+                  Services
+                </NavigationMenuTrigger>
+                <NavigationMenuContent>
+                  <ul className="grid w-[300px] gap-3 p-4 md:w-[400px] lg:w-[500px] md:grid-cols-2">
+                    {components.map((component) => (
+                      <ListItem key={component.title} title={component.title} href={component.href}>
+                        {component.description}
+                      </ListItem>
+                    ))}
+                  </ul>
+                </NavigationMenuContent>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/our-team" className="text-sm font-medium text-gray-900 dark:text-white">
+                  Our Team
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/pricing-plans" className="text-sm font-medium text-gray-900 dark:text-white">
+                  Pricing Plans
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/contact" className="text-sm font-medium text-gray-900 dark:text-white">
+                  Contact Us
                 </Link>
               </NavigationMenuItem>
             </NavigationMenuList>
@@ -135,8 +136,8 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4">
-                <Link href="/what-we-do" onClick={() => setIsOpen(false)}>
-                  WHAT WE DO
+                <Link href="/about" onClick={() => setIsOpen(false)}>
+                  About
                 </Link>
                 <Link href="/who-we-help" onClick={() => setIsOpen(false)}>
                   WHO WE HELP
@@ -147,8 +148,8 @@ export function Navbar() {
                 <Link href="/how-we-deliver" onClick={() => setIsOpen(false)}>
                   HOW WE DELIVER
                 </Link>
-                <Link href="/join" onClick={() => setIsOpen(false)}>
-                  JOIN DEVINC
+                <Link href="/contact" onClick={() => setIsOpen(false)}>
+                  Contact Us
                 </Link>
                 <Button
                   className="w-full"
@@ -159,7 +160,7 @@ export function Navbar() {
                 >
                   What Sets Us Apart
                 </Button>
-                <Button className="w-full">Explore Careers</Button>
+                {/* <Button className="w-full">Explore Careers</Button> */}
               </nav>
             </SheetContent>
           </Sheet>
