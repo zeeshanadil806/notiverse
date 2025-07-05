@@ -16,47 +16,47 @@ import { Menu } from "lucide-react"
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 import { AnimatedLogo } from "../logo-animation"
 import { ThemeToggle } from "../theme-toggle"
-import { useRouter } from "next/navigation"
+// import { useRouter } from "next/navigation"
 // import { ThemeToggle } from "./theme-toggle"
 // import { AnimatedLogo } from "./animated-logo"
 
 const components: { title: string; href: string; description: string }[] = [
   {
     title: "Digital Marketing Solutions",
-    href: "/services/digital-strategy",
+    href: "/contact",
     description: "Transform your business with comprehensive digital solutions.",
   },
   {
     title: "Branding & Design",
-    href: "/services/consulting",
+    href: "/contact",
     description: "Expert guidance to navigate your digital transformation.",
   },
   {
     title: "E-commerce & Strategy",
-    href: "/services/development",
+    href: "/contact",
     description: "Grow Online with Our best E-commerce strategies",
   },
   {
     title: "Software Development & Web Solutions",
-    href: "/services/development",
+    href: "/contact",
     description: "Build scalable solutions tailored to your specific needs.",
   },
 ]
 
 export function Navbar() {
   const [isOpen, setIsOpen] = React.useState(false)
-  const router = useRouter();
+  // const router = useRouter();
 
-  const scrollToSection = (sectionId: string) => {
-    const section = document.getElementById(sectionId);
+  // const scrollToSection = (sectionId: string) => {
+  //   const section = document.getElementById(sectionId);
   
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
-    } else {
-      // Navigate to home and scroll smoothly after navigation
-      router.push(`/?scrollTo=${sectionId}`);
-    }
-  };
+  //   if (section) {
+  //     section.scrollIntoView({ behavior: "smooth" });
+  //   } else {
+  //     // Navigate to home and scroll smoothly after navigation
+  //     router.push(`/?scrollTo=${sectionId}`);
+  //   }
+  // };
   
 
   return (
@@ -89,7 +89,7 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <NavigationMenuItem>
+              {/* <NavigationMenuItem>
                 <Link href="/our-team" className="text-sm font-medium text-gray-900 dark:text-white">
                   Our Team
                 </Link>
@@ -98,7 +98,7 @@ export function Navbar() {
                 <Link href="/pricing-plans" className="text-sm font-medium text-gray-900 dark:text-white">
                   Pricing Plans
                 </Link>
-              </NavigationMenuItem>
+              </NavigationMenuItem> */}
               <NavigationMenuItem>
                 <Link href="/contact" className="text-sm font-medium text-gray-900 dark:text-white">
                   Contact Us
@@ -110,13 +110,13 @@ export function Navbar() {
 
         <div className="flex flex-1 items-center justify-end space-x-2 lg:space-x-4">
           <ThemeToggle />
-          <Button
+          {/* <Button
             variant="ghost"
             className="hidden lg:inline-flex text-sm font-medium hover:bg-primary hover:text-primary-foreground px-3"
             onClick={() => scrollToSection("what-sets-us-apart")}
           >
             What Sets Us Apart
-          </Button>
+          </Button> */}
           <Link href={"/book-a-call"}>
             <Button
               variant="default"
@@ -136,22 +136,19 @@ export function Navbar() {
             </SheetTrigger>
             <SheetContent side="right">
               <nav className="flex flex-col space-y-4">
+              <Link href="/" onClick={() => setIsOpen(false)}>
+                  HOME
+                </Link>
                 <Link href="/about" onClick={() => setIsOpen(false)}>
-                  About
-                </Link>
-                <Link href="/who-we-help" onClick={() => setIsOpen(false)}>
-                  WHO WE HELP
-                </Link>
-                <Link href="/who-we-are" onClick={() => setIsOpen(false)}>
-                  WHO WE ARE
-                </Link>
-                <Link href="/how-we-deliver" onClick={() => setIsOpen(false)}>
-                  HOW WE DELIVER
+                  ABOUT
                 </Link>
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
-                  Contact Us
+                  CONTACT US
                 </Link>
-                <Button
+                <Link href="/who-we-are" onClick={() => setIsOpen(false)}>
+                  BOOK A SESSION
+                </Link>
+                {/* <Button
                   className="w-full"
                   onClick={() => {
                     scrollToSection("what-sets-us-apart")
@@ -159,7 +156,7 @@ export function Navbar() {
                   }}
                 >
                   What Sets Us Apart
-                </Button>
+                </Button> */}
                 {/* <Button className="w-full">Explore Careers</Button> */}
               </nav>
             </SheetContent>

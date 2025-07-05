@@ -105,7 +105,7 @@ export default function HeroSection() {
                 Drive Tomorrow&apos;s Possibilities
               </h1>
               <p className="mt-4 max-w-xl text-lg text-gray-300 sm:mt-6 sm:text-xl md:mt-8">
-                We help companies redefine the future through technology
+                Where innovation meets intention
               </p>
               <div className="mt-6 sm:mt-8 md:mt-10">
                 <Link href={"/book-a-call"}>

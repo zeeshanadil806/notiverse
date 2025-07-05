@@ -1,8 +1,15 @@
 "use client"
 import { motion } from "framer-motion"
 import { Star, Quote } from "lucide-react"
-
-const testimonials = [
+import { useState } from "react"
+type Testimonial = {
+  name: string;
+  position: string;
+  company: string;
+  quote: string;
+  rating: number;
+};
+const testimonials:Testimonial[] = [
   {
     name: "Hassan A.",
     position: "Founder",
@@ -32,8 +39,7 @@ const testimonials = [
 export const TestimonialsSection = () => {
   return (
     <section className="relative py-20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 " />
+      <div className="absolute inset-0" />
 
       <div className="container relative z-10 mx-auto px-4">
         <div className="mb-12 text-center">
@@ -67,35 +73,7 @@ export const TestimonialsSection = () => {
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.2 }}
-              className="relative"
-            >
-              <div className="relative rounded-lg bg-gray-300/30 p-8">
-                <Quote className="absolute right-8 top-8 h-12 w-12 text-primary/20" />
-
-                <div className="mb-4 flex">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star key={i} className="h-5 w-5 fill-primary text-primary" />
-                  ))}
-                </div>
-
-                <blockquote className="mb-8 text-lg text-gray-700 dark:text-white">&quot;{testimonial.quote}&quot;</blockquote>
-
-                <div className="flex items-center gap-4">
-                  <div>
-                    <div className="font-semibold dark:text-white">{testimonial.name}</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-400">
-                      {testimonial.position}, {testimonial.company}
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </motion.div>
+            <TestimonialCard key={index} testimonial={testimonial} />
           ))}
         </div>
 
@@ -115,4 +93,57 @@ export const TestimonialsSection = () => {
     </section>
   )
 }
+type TestimonialProps = {
+  testimonial: Testimonial;
+};
+const TestimonialCard = ({testimonial} :TestimonialProps) => {
+  const [isExpanded, setIsExpanded] = useState(false)
 
+  const handleToggle = () => {
+    setIsExpanded(!isExpanded)
+  }
+
+  const displayQuote = isExpanded
+    ? testimonial.quote
+    : `${testimonial.quote.slice(0, 120)}...`
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ delay: 0.2 }}
+      className="relative"
+    >
+      <div className="relative rounded-lg bg-gray-300/30 p-8">
+        <Quote className="absolute right-8 top-8 h-12 w-12 text-primary/20" />
+
+        <div className="mb-4 flex">
+          {[...Array(testimonial.rating)].map((_, i) => (
+            <Star key={i} className="h-5 w-5 fill-primary text-primary" />
+          ))}
+        </div>
+
+        <blockquote className="mb-2 lg:text-lg text-sm text-gray-700 dark:text-white">
+          &quot;{displayQuote}&quot;
+        <button
+          onClick={handleToggle}
+          className="text-blue-500 underline flex items-center space-x-1"
+        >
+          <span>{isExpanded ? 'Read Less' : 'Read More'}</span>
+        </button>
+        </blockquote>
+
+
+        <div className="flex items-center gap-4">
+          <div>
+            <div className="font-semibold dark:text-white">{testimonial.name}</div>
+            <div className="text-sm text-gray-700 dark:text-gray-400">
+              {testimonial.position}, {testimonial.company}
+            </div>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  )
+}

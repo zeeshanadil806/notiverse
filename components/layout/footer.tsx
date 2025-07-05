@@ -93,10 +93,10 @@ export function Footer() {
               <Phone size={20} className="mr-2" />
               +92 323 4809973
             </p>
-            <p className="flex">
+            {/* <p className="flex">
               <Phone size={20} className="mr-2" />
               +1 (647) 613 8379
-            </p>
+            </p> */}
           </motion.div>
 
           <motion.div

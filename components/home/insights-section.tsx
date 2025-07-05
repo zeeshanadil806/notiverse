@@ -7,7 +7,7 @@ import { Button } from '@/components/ui/button'
 
 interface InsightCard {
   id: string
-  category: 'Case Study' | 'Blogs'
+  category: string
   title: string
   description: string
   image: string
@@ -17,52 +17,28 @@ interface InsightCard {
 const insights: InsightCard[] = [
   {
     id: '1',
-    category: 'Case Study',
-    title: 'Enabling Seamless Resale Operations Across E-Commerce',
+    category: 'Featured',
+    title: 'Growth Strategies Powered by Performance Marketing Solutions for Lead Gen and ecom sector',
     description: 'Learn how we revolutionized the resale process for a major e-commerce platform, increasing efficiency by 200%.',
-    image: '/bginsight.png',
+    image: '/bginsight1.png',
     link: '/case-study/ecommerce'
   },
   {
     id: '2',
-    category: 'Blogs',
-    title: 'Custom Web Application Development: Everything You Need to Know',
+    category: 'Featured',
+    title: 'Custom Website, Application Development, UI UX Superiority: Everything You Need to Know',
     description: 'Dive deep into the world of custom web applications and discover how they can transform your business operations.',
-    image: '/bginsight.png',
+    image: '/bginsight2.png',
     link: '/blogs/web-development'
   },
   {
     id: '3',
-    category: 'Case Study',
-    title: 'Empowering XQUIC for Automated Financial Accuracy',
+    category: 'Featured',
+    title: 'Smart ideas.Driven by imagination | Branded by humans | Boosted by AI',
     description: 'Explore how we helped XQUIC achieve 99.9% accuracy in their financial reporting through advanced automation.',
-    image: '/bginsight.png',
+    image: '/bginsight3.png',
     link: '/case-study/finance'
   },
-  {
-    id: '4',
-    category: 'Blogs',
-    title: 'How Cloud Computing Can Transform Small Businesses',
-    description: 'Uncover the potential of cloud computing and its impact on small business growth and scalability.',
-    image: '/bginsight.png',
-    link: '/blogs/cloud-computing'
-  },
-  {
-    id: '5',
-    category: 'Blogs',
-    title: "Trends of Mobile Design: What's Next for Your Business?",
-    description: 'Stay ahead of the curve with our insights into the latest mobile design trends and their business implications.',
-    image: '/bginsight.png',
-    link: '/blogs/mobile-design'
-  },
-  {
-    id: '6',
-    category: 'Case Study',
-    title: "KUDO's Journey to Bridging Global Communications",
-    description: 'Discover how we helped KUDO create a seamless multilingual communication platform for global enterprises.',
-    image: '/bginsight.png',
-    link: '/case-study/communications'
-  }
 ]
 
 const InsightCard = ({ insight, setSelectedInsight }: { insight: InsightCard; setSelectedInsight: (insight: InsightCard | null) => void }) => {
@@ -178,11 +154,11 @@ export default function InsightsSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="mt-2 text-4xl font-bold dark:text-white sm:text-5xl"
+            className="mt-2 text-4xl font-bold text-[#948f87] dark:text-white sm:text-5xl"
           >
-            Stories of our{' '}
-            <span className="text-primary">transformations</span> across{' '}
-            <span className="text-primary">Services</span> and{' '}
+            Stories Of Our{' '}
+            <span className="text-primary">Transformations</span> Across{' '}
+            <span className="text-primary">Services</span> And{' '}
             <span className="text-primary">Industries</span>
           </motion.h2>
           <motion.p
@@ -207,7 +183,7 @@ export default function InsightsSection() {
           ))}
         </div>
 
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -222,7 +198,7 @@ export default function InsightsSection() {
             View All Insights
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       <AnimatePresence>
