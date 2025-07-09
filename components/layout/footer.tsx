@@ -12,10 +12,11 @@ import { MapPinIcon } from "@heroicons/react/24/solid";
 const quickLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/about" },
-  { name: "What Sets Us Apart", href: "/#what-sets-us-apart" },
-  { name: "Our Services", href: "/#services" },
-  { name: "Our Team", href: "/our-team" },
+  // { name: "What Sets Us Apart", href: "/#what-sets-us-apart" },
+  // { name: "Our Services", href: "/#services" },
+  // { name: "Our Team", href: "/our-team" },
   { name: "Contact Us", href: "/contact" },
+  { name: "Book a Session", href: "/book-a-call" },
 ];
 
 const socialLinks = [

@@ -34,7 +34,7 @@ const insights: InsightCard[] = [
   {
     id: '3',
     category: 'Featured',
-    title: 'Smart ideas.Driven by imagination | Branded by humans | Boosted by AI',
+    title: 'Smart Ideas | Driven by Imagination | Branded by Humans | Boosted by AI',
     description: 'Explore how we helped XQUIC achieve 99.9% accuracy in their financial reporting through advanced automation.',
     image: '/bginsight3.png',
     link: '/case-study/finance'
@@ -156,7 +156,7 @@ export default function InsightsSection() {
             transition={{ delay: 0.2 }}
             className="mt-2 text-4xl font-bold text-[#948f87] dark:text-white sm:text-5xl"
           >
-            Stories Of Our{' '}
+            Stories of Our{' '}
             <span className="text-primary">Transformations</span> Across{' '}
             <span className="text-primary">Services</span> And{' '}
             <span className="text-primary">Industries</span>

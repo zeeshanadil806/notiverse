@@ -24,7 +24,7 @@ const serviceCategories: Omit<ServiceCardProps, "index">[] = [
       "Data Tracking & Analysis",
       "Performance Reporting",
     ],
-    image: "/bgservice.png",
+    image: "/services/dm.png",
   },
   {
     title: "Branding & Design",
@@ -50,7 +50,7 @@ const serviceCategories: Omit<ServiceCardProps, "index">[] = [
       "Pixel Integration",
       "Catalog Mapping",
     ],
-    image: "/bgservice.png",
+    image: "/services/ecom.png",
   },
   {
     title: "Software Development & Web Solutions",
@@ -60,7 +60,7 @@ const serviceCategories: Omit<ServiceCardProps, "index">[] = [
       "Website Design & Development",
       "Custom ERP & Business Solutions",
     ],
-    image: "/bgservice.png",
+    image: "/services/dev.png",
   },
 ]
 
@@ -157,7 +157,7 @@ const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
                   delay: shouldShowItems ? itemIndex * (isMobile ? 0.15 : 0.1) : 0,
                   ease: "easeOut",
                 }}
-                className="text-sm font-mono font-semibold leading-relaxed"
+                className="text-sm font-semibold leading-relaxed"
               >
                 • {item}
               </motion.li>
