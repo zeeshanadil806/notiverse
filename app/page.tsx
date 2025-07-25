@@ -8,7 +8,7 @@ import { TestimonialsSection } from "@/components/home/testimonials-section";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Notify",
+  title: "Notiverse",
   description:
     "Notify offers expert digital marketing & e-commerce solutions to grow your business. Get SEO, PPC, and social media marketing services tailored to your needs.",
   keywords: [

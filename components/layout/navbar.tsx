@@ -120,7 +120,7 @@ export function Navbar() {
           <Link href={"/book-a-call"}>
             <Button
               variant="default"
-              className="hidden lg:inline-flex text-sm font-medium bg-primary text-primary-foreground hover:bg-primary/90 px-4"
+              className="hidden lg:inline-flex text-sm font-medium bg-primary text-white hover:bg-primary/90 px-4"
             >
               BOOK A SESSION
             </Button>

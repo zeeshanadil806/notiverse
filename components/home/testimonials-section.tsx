@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Geek Radar",
     quote:
-      "Working with Notify was an incredible experience! They completely transformed our vision into a stunning UI/UX design for our app and website. Their attention to detail and understanding of user experience truly set them apart. The marketing strategy they crafted has helped us engage our audience like never before. From start to finish, the Notify team was collaborative, responsive, and committed to our success. I can’t recommend them enough!",
+      "Working with Notify on our app’s UI/UX design and custom illustrations was a truly smooth and rewarding experience. Their team’s passion and work ethic stood out, delivering creative, user-focused results that elevated our product.",
     rating: 5,
   },
   {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     position: "Co Founder",
     company: "Event Parcel",
     quote:
-      "Partnering with Notify for our website development and upgrade was a fantastic decision. They brought our vision for Event Parcel to life, creating a site that not only looks great but also functions seamlessly for our African-based clients. The team's expertise in web design and user experience was evident throughout the process, and their dedication to delivering high-quality work on time was impressive. Since the upgrade, we've seen an increase in user engagement and bookings. I highly recommend Notify for anyone looking to elevate their online presence!",
+      "Choosing Notify to revamp our Event Parcel website was a game-changer. Their design and UX expertise delivered a sleek, user-friendly platform that resonates with our African audience.",
     rating: 5,
   },
   {
@@ -41,7 +41,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Dara",
     quote:
-      "Hands down, one of the best teams we've worked with—our website looks incredible and works like a charm. They just got what we needed and nailed it! - Dara -",
+      "Our website looks incredible and works like a charm. They just got what we needed and nailed it! - Dara -",
     rating: 5,
   },
   {
@@ -49,7 +49,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Amayra Jewels",
     quote:
-      "our jewelry site is elegant, smooth, and captures our brand perfectly. They turned our vision into a sparkling reality!",
+      "Our jewelry site is elegant, smooth, and captures our brand perfectly. They turned our vision into a sparkling reality! - Amayra Jewels",
     rating: 5,
   },
   {
@@ -65,7 +65,7 @@ const testimonials: Testimonial[] = [
     position: "Co Founder",
     company: "Rabazka",
     quote:
-      "Blown away by the shoot—they flawlessly captured over 130 outfits with style, precision, and creativity. From planning to final edits, everything was smooth and spot-on!",
+      "Captured over 130 outfits with style, precision, and creativity. From planning to final edits, everything was smooth and spot-on!",
     rating: 5,
   },
   {
@@ -73,7 +73,7 @@ const testimonials: Testimonial[] = [
     position: "Co Founder",
     company: "Alizay Saad Studio",
     quote:
-      "Incredible team! From a stunning website to sharp social media and powerful performance marketing, they brought our fashion brand to life and elevated our presence across the board.",
+      "From a stunning website to sharp and powerful performance marketing, they brought our fashion brand to life and elevated our presence across the board.",
     rating: 5,
   },
   {
@@ -81,7 +81,7 @@ const testimonials: Testimonial[] = [
     position: "Co Founder",
     company: "Shahtaj Design House",
     quote:
-      "our website turned out amazing, and their full-circle performance marketing pushed our brand to new heights. Growth, visibility, results—they delivered it all!",
+      "Our website turned out amazing, and their full-circle performance marketing pushed our brand to new heights. Growth, visibility, results—they delivered it all!",
     rating: 5,
   },
 ];
