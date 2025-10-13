@@ -10,38 +10,48 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Notiverse",
   description:
-    "Notify offers expert digital marketing & e-commerce solutions to grow your business. Get SEO, PPC, and social media marketing services tailored to your needs.",
+    "Notiverse offers expert digital marketing & e-commerce solutions to grow your business. Get SEO, PPC, and social media marketing services tailored to your needs.",
   keywords: [
-    "digital marketing",
-    "SEO",
-    "e-commerce solutions",
-    "PPC",
-    "social media marketing",
-  ],
-  authors: [{ name: "Notify Team", url: "https://notiverse.io/" }],
+  "IT solutions",
+  "software development",
+  "custom software",
+  "mobile app development",
+  "AI solutions",
+  "cloud computing",
+  "cybersecurity services",
+  "e-commerce development",
+  "digital transformation",
+  "web development",
+  "IT consulting",
+  "SEO services",
+  "PPC marketing",
+  "social media marketing",
+],
+
+  authors: [{ name: "Notiverse Team", url: "https://notiverse.io/" }],
   metadataBase: new URL("https://notiverse.io"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Notify",
+    title: "Notiverse | IT Solutions, Software Development & Digital Transformation",
     description:
-      "Boost your business with our top-notch digital marketing and e-commerce strategies.",
+      "Notiverse provides end-to-end IT services including custom software development, mobile app solutions, cloud computing, cybersecurity, digital marketing, and AI-powered innovations.",
     url: "https://notiverse.io/",
-    siteName: "Notify",
+    siteName: "Notiverse",
     type: "website",
     images: [
       {
         url: "https://notiverse.io/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Notify - Digital Marketing",
+        alt: "Notiverse - Digital Marketing",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Notify",
+    title: "Notiverse",
     description:
       "Expert digital marketing & e-commerce solutions to scale your business.",
     images: ["https://notiverse.io/images/twitter-image.jpg"],
@@ -60,7 +70,7 @@ export default function Home() {
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Organization",
-            "name": "Notify",
+            "name": "Notiverse",
             "url": "https://notiverse.io/",
             "logo": "https://notiverse.io/logo.png",
             "sameAs": [

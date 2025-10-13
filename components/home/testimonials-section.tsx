@@ -17,7 +17,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Mayfair Cars UAE",
     quote:
-      "Partnering with Notify for our website development was a fantastic experience. From the start, their team took the time to understand our vision for Mayfair Cars and crafted a site that truly reflects our brand. Their expertise in creating user-friendly designs and optimizing for performance has made a huge difference in how we engage with customers. The support throughout the launch was exceptional, and we've already seen an increase in bookings. I highly recommend Notify for anyone looking to elevate their online presence!",
+      "Partnering with Notiverse for our website development was a fantastic experience. From the start, their team took the time to understand our vision for Mayfair Cars and crafted a site that truly reflects our brand. Their expertise in creating user-friendly designs and optimizing for performance has made a huge difference in how we engage with customers. The support throughout the launch was exceptional, and we've already seen an increase in bookings. I highly recommend Notiverse for anyone looking to elevate their online presence!",
     rating: 5,
   },
   {
@@ -25,7 +25,7 @@ const testimonials: Testimonial[] = [
     position: "CEO",
     company: "Geek Radar",
     quote:
-      "Working with Notify on our app’s UI/UX design and custom illustrations was a truly smooth and rewarding experience. Their team’s passion and work ethic stood out, delivering creative, user-focused results that elevated our product.",
+      "Working with Notiverse on our app’s UI/UX design and custom illustrations was a truly smooth and rewarding experience. Their team’s passion and work ethic stood out, delivering creative, user-focused results that elevated our product.",
     rating: 5,
   },
   {
@@ -33,7 +33,7 @@ const testimonials: Testimonial[] = [
     position: "Co Founder",
     company: "Event Parcel",
     quote:
-      "Choosing Notify to revamp our Event Parcel website was a game-changer. Their design and UX expertise delivered a sleek, user-friendly platform that resonates with our African audience.",
+      "Choosing Notiverse to revamp our Event Parcel website was a game-changer. Their design and UX expertise delivered a sleek, user-friendly platform that resonates with our African audience.",
     rating: 5,
   },
   {
@@ -182,7 +182,7 @@ export const TestimonialsSection = () => {
         >
           <p className="mx-auto max-w-2xl text-lg text-gray-400">
             Join hundreds of satisfied clients who have transformed their
-            digital presence with Notify. Let us help you achieve your business
+            digital presence with Notiverse. Let us help you achieve your business
             goals.
           </p>
         </motion.div>

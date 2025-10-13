@@ -5,40 +5,40 @@ import DirectContact from "@/components/contact/direct-contact";
 // import LocationMap from "@/components/contact/location-map";
 
 export const metadata: Metadata = {
-  title: "Contact Us - Notify | Get in Touch with Our Experts",
+  title: "Contact Us - Notiverse | Get in Touch with Our Experts",
   description:
-    "Have questions? Contact Notify for expert digital marketing & e-commerce solutions. Reach us via email, phone, or visit our office.",
+    "Have questions? Contact Notiverse for expert digital marketing & e-commerce solutions. Reach us via email, phone, or visit our office.",
   keywords: [
-    "contact Notify",
+    "contact Notiverse",
     "digital marketing support",
     "e-commerce solutions contact",
-    "Notify customer service",
+    "Notiverse customer service",
   ],
   metadataBase: new URL("https://notiverse.io"),
   alternates: {
     canonical: "/contact",
   },
   openGraph: {
-    title: "Contact Us - Notify | Get in Touch with Our Experts",
+    title: "Contact Us - Notiverse | Get in Touch with Our Experts",
     description:
-      "Need help with digital marketing or e-commerce solutions? Contact Notify today via email, phone, or visit us in person.",
+      "Need help with digital marketing or e-commerce solutions? Contact Notiverse today via email, phone, or visit us in person.",
     url: "https://notiverse.io/contact",
-    siteName: "Notify",
+    siteName: "Notiverse",
     type: "website",
     images: [
       {
         url: "https://notiverse.io/images/contact-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Contact Notify Digital Marketing Team",
+        alt: "Contact Notiverse Digital Marketing Team",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Contact Us - Notify | Get in Touch with Our Experts",
+    title: "Contact Us - Notiverse | Get in Touch with Our Experts",
     description:
-      "Need help with digital marketing or e-commerce? Contact Notify today!",
+      "Need help with digital marketing or e-commerce? Contact Notiverse today!",
     images: ["https://notiverse.io/images/contact-twitter.jpg"],
   },
   icons: {

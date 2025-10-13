@@ -24,7 +24,7 @@ export default function LocationMap() {
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
           />
           <Marker position={position}>
-            <Popup>Notify Headquarters</Popup>
+            <Popup>Notiverse Headquarters</Popup>
           </Marker>
         </MapContainer>
       </div>

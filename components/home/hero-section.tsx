@@ -7,8 +7,8 @@ import Link from "next/link"
 // Custom hook for responsive video source
 const useResponsiveVideo = () => {
   const [videoSource, setVideoSource] = useState({
-    src: "/hero.mp4",
-    type: "video/mp4",
+    src: "/hero.webm",
+    type: "video/webm",
   })
 
   useEffect(() => {
@@ -17,20 +17,20 @@ const useResponsiveVideo = () => {
       if (width <= 768) {
         // Mobile video
         setVideoSource({
-          src: "/hero.mp4",
-          type: "video/mp4",
+          src: "/hero.webm",
+          type: "video/webm",
         })
       } else if (width <= 1024) {
         // Tablet video
         setVideoSource({
-          src: "/hero.mp4",
-          type: "video/mp4",
+          src: "/hero.webm",
+          type: "video/webm",
         })
       } else {
         // Desktop video
         setVideoSource({
-          src: "/hero.mp4",
-          type: "video/mp4",
+          src: "/hero.webm",
+          type: "video/webm",
         })
       }
     }
@@ -62,9 +62,11 @@ export default function HeroSection() {
             loop
             playsInline
             className="hidden h-full w-full object-cover lg:block"
+              preload="auto"   // <-- ensures faster load
             // poster="/video-poster-desktop.jpg"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/hero.webm" type="video/webm" />
+              <source src="/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Tablet Video */}
@@ -74,10 +76,12 @@ export default function HeroSection() {
             muted
             loop
             playsInline
+              preload="auto"   // <-- ensures faster load
             className="hidden h-full w-full object-cover md:block lg:hidden"
             // poster="/video-poster-tablet.jpg"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/hero.webm" type="video/webm" />
+              <source src="/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Mobile Video */}
@@ -88,9 +92,11 @@ export default function HeroSection() {
             loop
             playsInline
             className="h-[70vh] w-full object-cover md:hidden"
+              preload="auto"   // <-- ensures faster load
             // poster="/video-poster-mobile.jpg"
           >
-            <source src="/hero.mp4" type="video/mp4" />
+            <source src="/hero.webm" type="video/webm" />
+              <source src="/hero.mp4" type="video/mp4" />
           </video>
 
           {/* Overlay */}

@@ -3,6 +3,7 @@ import { motion } from "framer-motion"
 import { Calendar, Clock, Users, Zap } from "lucide-react"
 import CalendlyEmbed from "./CalendlyEmbed"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import Link from "next/link"
 
 const benefits = [
   {
@@ -51,7 +52,8 @@ export default function BookMeeting() {
             <h2 className="mb-6 text-2xl font-semibold">Why Book a Call?</h2>
             <div className="grid gap-4 sm:grid-cols-2">
               {benefits.map((benefit, index) => (
-                <Card key={index} className="bg-gray-800">
+                <Link href={"/book-a-call"} key={index}>
+                <Card  className="bg-gray-800">
                   <CardHeader>
                     <benefit.icon className="h-8 w-8 text-primary" />
                     <CardTitle className="text-lg text-white">{benefit.title}</CardTitle>
@@ -60,6 +62,7 @@ export default function BookMeeting() {
                     <CardDescription>{benefit.description}</CardDescription>
                   </CardContent>
                 </Card>
+                </Link>
               ))}
             </div>
           </motion.div>

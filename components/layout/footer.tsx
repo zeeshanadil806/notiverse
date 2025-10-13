@@ -94,6 +94,14 @@ export function Footer() {
               <Phone size={20} className="mr-2" />
               +92 323 4809973
             </p>
+            <p className="flex">
+              <Phone size={20} className="mr-2" />
+              +0406 5651 996
+            </p>
+            <p className="flex">
+              <Phone size={20} className="mr-2" />
+              +1 226 507-9836
+            </p>
             {/* <p className="flex">
               <Phone size={20} className="mr-2" />
               +1 (647) 613 8379
@@ -130,9 +138,22 @@ export function Footer() {
               <div className="flex items-start gap-2">
                 <MapPinIcon className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
                 <p className="text-sm leading-relaxed">
-                  8 Strathmore Pl
+                  50 marble Arch crescent
                   <br />
-                  Barrie On, Canada
+                  Scarborough Ontario, Canada
+                </p>
+              </div>
+            </div>
+
+            {/* australia Office */}
+            <div>
+              <h4 className="text-sm font-medium text-primary mb-2">Australia</h4>
+              <div className="flex items-start gap-2">
+                <MapPinIcon className="h-4 w-4 text-red-500 flex-shrink-0 mt-0.5" />
+                <p className="text-sm leading-relaxed">
+                  Wadawurrang Country RS&S Mill, 
+                  <br />
+                  17 Rutland St, Newtown VIC 3220
                 </p>
               </div>
             </div>
@@ -188,7 +209,7 @@ export function Footer() {
         </div>
 
         <div className="mt-8 text-center text-sm text-gray-400">
-          © {new Date().getFullYear()} Notify. All rights reserved.
+          © {new Date().getFullYear()} Notiverse. All rights reserved.
         </div>
       </div>
     </footer>

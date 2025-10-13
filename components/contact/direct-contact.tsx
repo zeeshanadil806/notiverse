@@ -31,6 +31,12 @@ export default function DirectContact() {
             +92 323 480 9973
           </a>
         </div>
+        <div className="flex items-center space-x-2">
+          <Phone className="h-5 w-5 text-primary" />
+          <a href="tel:+0406 5651996" className="hover:text-primary">
+            +0406 5651 996
+          </a>
+        </div>
       </div>
       <h3 className="mb-4 mt-8 text-xl font-semibold">Social Links</h3>
       <div className="flex space-x-4">

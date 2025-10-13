@@ -2,9 +2,9 @@ import { Metadata } from "next";
 import BookMeeting from "@/components/book-a-call/BookMeeting";
 
 export const metadata: Metadata = {
-  title: "Book a Call - Schedule a Free Consultation | Notify",
+  title: "Book a Call - Schedule a Free Consultation | Notiverse",
   description:
-    "Book a free consultation with Notify's digital marketing and e-commerce experts. Let's discuss your business growth strategies today!",
+    "Book a free consultation with Notiverse's digital marketing and e-commerce experts. Let's discuss your business growth strategies today!",
   keywords: [
     "Book a call",
     "schedule a meeting",
@@ -17,26 +17,26 @@ export const metadata: Metadata = {
     canonical: "/book-a-call",
   },
   openGraph: {
-    title: "Book a Call - Schedule a Free Consultation | Notify",
+    title: "Book a Call - Schedule a Free Consultation | Notiverse",
     description:
-      "Schedule a free consultation with Notify to explore expert digital marketing and e-commerce solutions tailored to your business.",
+      "Schedule a free consultation with Notiverse to explore expert digital marketing and e-commerce solutions tailored to your business.",
     url: "https://notiverse.io/book-a-call",
-    siteName: "Notify",
+    siteName: "Notiverse",
     type: "website",
     images: [
       {
         url: "https://notiverse.io/images/book-a-call-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Book a call with Notify - Digital Marketing Consultation",
+        alt: "Book a call with Notiverse - Digital Marketing Consultation",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Book a Call - Schedule a Free Consultation | Notify",
+    title: "Book a Call - Schedule a Free Consultation | Notiverse",
     description:
-      "Get expert insights on digital marketing and e-commerce strategies by scheduling a free call with Notify today.",
+      "Get expert insights on digital marketing and e-commerce strategies by scheduling a free call with Notiverse today.",
     images: ["https://notiverse.io/images/book-a-call-twitter.jpg"],
   },
   icons: {

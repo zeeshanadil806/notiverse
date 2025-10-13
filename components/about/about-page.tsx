@@ -43,7 +43,7 @@ export default function AboutPage() {
               transition={{ duration: 0.6 }}
               className="text-4xl font-bold leading-tight sm:text-5xl md:text-6xl"
             >
-              About <span className="text-primary">Notify</span>
+              About <span className="text-primary">Notiverse</span>
             </motion.h1>
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -75,7 +75,7 @@ export default function AboutPage() {
           className="mx-auto max-w-3xl text-center text-lg text-gray-800 dark:text-gray-300"
         >
           <p className="mb-4">
-            Since 2019, Notify has been at the forefront of developing software solutions for industries such as ERP,
+            Since 2019, Notiverse has been at the forefront of developing software solutions for industries such as ERP,
             business development, finance, supply chain, and E-commerce. We revolutionize the digital landscape by
             crafting strategies that not only create a strong online presence but also deliver tangible results.
           </p>

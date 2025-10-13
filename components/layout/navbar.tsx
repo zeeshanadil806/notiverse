@@ -145,7 +145,7 @@ export function Navbar() {
                 <Link href="/contact" onClick={() => setIsOpen(false)}>
                   CONTACT US
                 </Link>
-                <Link href="/who-we-are" onClick={() => setIsOpen(false)}>
+                <Link href="/book-a-call" onClick={() => setIsOpen(false)}>
                   BOOK A SESSION
                 </Link>
                 {/* <Button

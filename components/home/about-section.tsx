@@ -62,7 +62,7 @@ export const FuturisticAbout = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="mb-12 text-center text-lg text-gray-300"
         >
-          At Notify, we specialize in creating personalized digital strategies that drive business growth in the online
+          At Notiverse, we specialize in creating personalized digital strategies that drive business growth in the online
           world.
         </motion.p>
 

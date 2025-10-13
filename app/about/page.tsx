@@ -3,12 +3,12 @@ import AboutPage from "@/components/about/about-page";
 import React from "react";
 
 export const metadata: Metadata = {
-  title: "About Notify - Leading Digital Marketing & E-Commerce Experts",
+  title: "About Notiverse - Leading Digital Marketing & E-Commerce Experts",
   description:
-    "Learn more about Notify, a trusted leader in digital marketing and e-commerce solutions. Our expert team helps businesses grow with SEO, PPC, and branding strategies.",
+    "Learn more about Notiverse, a trusted leader in digital marketing and e-commerce solutions. Our expert team helps businesses grow with SEO, PPC, and branding strategies.",
   keywords: [
-    "About Notify",
-    "Notify digital marketing",
+    "About Notiverse",
+    "Notiverse digital marketing",
     "e-commerce experts",
     "SEO specialists",
     "branding solutions",
@@ -18,26 +18,26 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
-    title: "About Notify - Leading Digital Marketing & E-Commerce Experts",
+    title: "About Notiverse - Leading Digital Marketing & E-Commerce Experts",
     description:
-      "Notify is a top-tier digital marketing and e-commerce solutions provider, specializing in SEO, PPC, and brand growth strategies.",
+      "Notiverse is a top-tier digital marketing and e-commerce solutions provider, specializing in SEO, PPC, and brand growth strategies.",
     url: "https://notiverse.io/about",
-    siteName: "Notify",
+    siteName: "Notiverse",
     type: "website",
     images: [
       {
         url: "https://notiverse.io/images/about-og.jpg",
         width: 1200,
         height: 630,
-        alt: "About Notify - Digital Marketing Experts",
+        alt: "About Notiverse - Digital Marketing Experts",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "About Notify - Leading Digital Marketing & E-Commerce Experts",
+    title: "About Notiverse - Leading Digital Marketing & E-Commerce Experts",
     description:
-      "Discover how Notify helps businesses grow with digital marketing, SEO, and e-commerce solutions.",
+      "Discover how Notiverse helps businesses grow with digital marketing, SEO, and e-commerce solutions.",
     images: ["https://notiverse.io/images/about-twitter.jpg"],
   },
   icons: {

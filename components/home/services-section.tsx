@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react"
 import { motion } from "framer-motion"
-import { ChevronDown } from "lucide-react"
+import { ChevronLeft, ChevronRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 interface ServiceCardProps {
@@ -62,6 +62,22 @@ const serviceCategories: Omit<ServiceCardProps, "index">[] = [
     ],
     image: "/services/dev.png",
   },
+  {
+    title: "AI Agents and Bots",
+    items: [
+      "Automate customer interactions and business processes with intelligent AI solutions",
+      "Our custom bots work 24/7 to boost efficiency, reduce costs, and enhance user experience",
+    ],
+    image: "/services/ai-bots.png",
+  },
+  {
+    title: "Staff Augmentation",
+    items: [
+      "Empower your leadership by quickly filling critical skill gaps without the overhead of permanent hires",
+      "We provide top talent that integrates seamlessly, keeping your projects moving and your vision on track",
+    ],
+    image: "/services/staff-aug.png",
+  },
 ]
 
 const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
@@ -92,8 +108,8 @@ const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
         }
       },
       {
-        threshold: 0.3, // Trigger when 30% of the card is visible
-        rootMargin: "-50px 0px -50px 0px", // Add some margin to trigger animation earlier
+        threshold: 0.3,
+        rootMargin: "-50px 0px -50px 0px",
       },
     )
 
@@ -106,13 +122,12 @@ const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
     }
   }, [isMobile])
 
-  // Determine whether to show items based on mobile/desktop and interaction state
   const shouldShowItems = isMobile ? isInView : isHovered
 
   return (
     <motion.div
       ref={cardRef}
-      className="relative h-[400px] overflow-hidden rounded-2xl"
+      className="relative h-[400px] min-w-[300px] md:min-w-[350px] flex-shrink-0 overflow-hidden rounded-2xl"
       onHoverStart={() => !isMobile && setIsHovered(true)}
       onHoverEnd={() => !isMobile && setIsHovered(false)}
       whileHover={!isMobile ? { scale: 1.02 } : {}}
@@ -121,7 +136,10 @@ const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
       transition={{ duration: 0.5, delay: index * 0.1 }}
     >
       {/* Background Image */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url(${image})` }} />
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat" 
+        style={{ backgroundImage: `url(${image})` }} 
+      />
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/50 to-black/80" />
@@ -182,7 +200,50 @@ const ServiceCard = ({ title, items, image, index }: ServiceCardProps) => {
 }
 
 export default function ServicesSection() {
+  const [currentIndex, setCurrentIndex] = useState(0)
   const [showAll, setShowAll] = useState(false)
+  const carouselRef = useRef<HTMLDivElement>(null)
+  const [isMobile, setIsMobile] = useState(false)
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    checkMobile()
+    window.addEventListener("resize", checkMobile)
+    return () => window.removeEventListener("resize", checkMobile)
+  }, [])
+
+  const scrollToIndex = (index: number) => {
+    if (carouselRef.current) {
+      const cardWidth = carouselRef.current.querySelector('.min-w-\\[300px\\]')?.clientWidth || 300
+      carouselRef.current.scrollTo({
+        left: index * (cardWidth + 24), // 24px is the gap
+        behavior: 'smooth'
+      })
+      setCurrentIndex(index)
+    }
+  }
+
+  const nextSlide = () => {
+    const nextIndex = (currentIndex + 1) % serviceCategories.length
+    scrollToIndex(nextIndex)
+  }
+
+  const prevSlide = () => {
+    const prevIndex = currentIndex === 0 ? serviceCategories.length - 1 : currentIndex - 1
+    scrollToIndex(prevIndex)
+  }
+
+  const handleScroll = () => {
+    if (carouselRef.current) {
+      const scrollLeft = carouselRef.current.scrollLeft
+      const cardWidth = carouselRef.current.querySelector('.min-w-\\[300px\\]')?.clientWidth || 300
+      const newIndex = Math.round(scrollLeft / (cardWidth + 24))
+      setCurrentIndex(newIndex)
+    }
+  }
 
   return (
     <section className="relative py-20">
@@ -197,12 +258,70 @@ export default function ServicesSection() {
           </h3>
         </div>
 
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {serviceCategories.slice(0, showAll ? undefined : 4).map((service, index) => (
-            <ServiceCard key={index} {...service} index={index} />
-          ))}
+        {/* Carousel Container */}
+        <div className="relative">
+          {/* Navigation Arrows */}
+          {!isMobile && (
+            <>
+              <button
+                onClick={prevSlide}
+                className="absolute left-0 top-1/2 z-20 -translate-y-1/2 transform rounded-full bg-white/80 p-2 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 -ml-6"
+                aria-label="Previous services"
+              >
+                <ChevronLeft className="h-6 w-6 text-gray-800" />
+              </button>
+              <button
+                onClick={nextSlide}
+                className="absolute right-0 top-1/2 z-20 -translate-y-1/2 transform rounded-full bg-white/80 p-2 shadow-lg backdrop-blur-sm transition-all hover:bg-white hover:scale-110 -mr-6"
+                aria-label="Next services"
+              >
+                <ChevronRight className="h-6 w-6 text-gray-800" />
+              </button>
+            </>
+          )}
+
+          {/* Carousel */}
+          <div
+            ref={carouselRef}
+            className="flex gap-6 overflow-x-auto scrollbar-hide snap-x snap-mandatory"
+            onScroll={handleScroll}
+            style={{
+              scrollbarWidth: 'none',
+              msOverflowStyle: 'none'
+            }}
+          >
+            {serviceCategories.map((service, index) => (
+              <div key={index} className="snap-start">
+                <ServiceCard {...service} index={index} />
+              </div>
+            ))}
+          </div>
+
+          {/* Dots Indicator */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {serviceCategories.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => scrollToIndex(index)}
+                className={`h-3 w-3 rounded-full transition-all ${
+                  index === currentIndex 
+                    ? 'bg-primary scale-125' 
+                    : 'bg-gray-300 hover:bg-gray-400'
+                }`}
+                aria-label={`Go to service ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
 
+        {/* Mobile indicator */}
+        {isMobile && (
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 text-sm">Swipe to explore more services</p>
+          </div>
+        )}
+
+        {/* View More Button (for mobile or alternative view) */}
         {serviceCategories.length > 4 && (
           <div className="mt-12 text-center">
             <Button
@@ -210,8 +329,8 @@ export default function ServicesSection() {
               className="rounded-full border-primary text-primary hover:bg-primary hover:text-white"
               onClick={() => setShowAll(!showAll)}
             >
-              View More Services
-              <ChevronDown className="ml-2 h-4 w-4" />
+              {showAll ? "Show Less" : "View More Services"}
+              <ChevronDown className={`ml-2 h-4 w-4 transition-transform ${showAll ? "rotate-180" : ""}`} />
             </Button>
           </div>
         )}
