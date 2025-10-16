@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://notiverse.io/images/og-image.jpg",
+        url: "https://notiverse.io/logo-bg.png",
         width: 1200,
         height: 630,
         alt: "Notiverse - Digital Marketing",

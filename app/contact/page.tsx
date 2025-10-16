@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://notiverse.io/images/contact-og.jpg",
+        url: "https://notiverse.io/logo-bg.png",
         width: 1200,
         height: 630,
         alt: "Contact Notiverse Digital Marketing Team",
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     title: "Contact Us - Notiverse | Get in Touch with Our Experts",
     description:
       "Need help with digital marketing or e-commerce? Contact Notiverse today!",
-    images: ["https://notiverse.io/images/contact-twitter.jpg"],
+    images: ["https://notiverse.io/logo-bg.png"],
   },
   icons: {
     icon: "/favicon.ico",

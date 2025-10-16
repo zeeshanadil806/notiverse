@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://notiverse.io/images/book-a-call-og.jpg",
+        url: "https://notiverse.io/logo-bg.png",
         width: 1200,
         height: 630,
         alt: "Book a call with Notiverse - Digital Marketing Consultation",
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
     title: "Book a Call - Schedule a Free Consultation | Notiverse",
     description:
       "Get expert insights on digital marketing and e-commerce strategies by scheduling a free call with Notiverse today.",
-    images: ["https://notiverse.io/images/book-a-call-twitter.jpg"],
+    images: ["https://notiverse.io/logo-bg.png"],
   },
   icons: {
     icon: "/favicon.ico",

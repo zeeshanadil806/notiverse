@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://notiverse.io/images/about-og.jpg",
+        url: "https://notiverse.io/logo-bg.png",
         width: 1200,
         height: 630,
         alt: "About Notiverse - Digital Marketing Experts",
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     title: "About Notiverse - Leading Digital Marketing & E-Commerce Experts",
     description:
       "Discover how Notiverse helps businesses grow with digital marketing, SEO, and e-commerce solutions.",
-    images: ["https://notiverse.io/images/about-twitter.jpg"],
+    images: ["https://notiverse.io/logo-bg.png"],
   },
   icons: {
     icon: "/favicon.ico",
